@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Psycopg2 and Postgres transactions
+author: me
 tags: [postgres]
 ---
 
