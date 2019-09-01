@@ -1,4 +1,6 @@
-title: My Jekyll Blog
-email: example@example.com
-description: My posts
+title: Notes
+email: yuran2016@gmail.com
+description: My notes about questions I answer everyday at my work as software developer
 url: https://ivanovyura.github.io
+
+theme: jekyll-theme-hacker

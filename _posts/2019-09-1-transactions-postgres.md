@@ -1,6 +1,6 @@
 ---
 layout: Psycopg2 and Postgres transactions
-title: POstgre
+title: Postgres
 tags: [postgres]
 ---
 
