@@ -1,0 +1,9 @@
+1. rabbitmq + kombu
+- rabbitmqctl
+- rabbitmqadmin (publish message and read with kombu Consumer)
+
+2. Celery tasks
+- worker 
+- message brocker
+
+3. PyPi: poetry publish VS setup.py
