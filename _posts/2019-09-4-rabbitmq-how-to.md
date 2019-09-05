@@ -85,7 +85,6 @@ Basically EXCHANGE is a kind of controller. Actually we can not send messages di
 It gets messages from Producer and then decides, to which queue to push the message (or multiple queues).
 
 There are rulles how to do it, based on Excnage type. **TBD**.
-See this nice article for details: https://www.rabbitmq.com/tutorials/tutorial-three-python.html
 
 ***BTW:*** list of exchanges can be get by `rabbitmqctl`:
 
@@ -94,3 +93,8 @@ rabbitmqctl list_exchanges
 ```
 
 So, how can we publish the message to the Queue?
+
+List of content:
+1. <https://www.rabbitmq.com/tutorials/tutorial-two-python.html>
+2. <https://www.rabbitmq.com/tutorials/tutorial-three-python.html>
+3. <https://www.rabbitmq.com/management-cli.html>
