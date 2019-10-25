@@ -10,29 +10,22 @@ tags: [postgres, lock]
 *Disclaimer*: this is not a tutiorial, just some notes to myself to know what to google, if I need to work with locks.
 This article will be changing during the time, when I come back to locks from time to time... or not.
 
-Computers rignt now have more than one CPU, so it is possible to run queries in parallel,
-so if we operate in different transactions, with the same resource,
-we need to know how not to access this resource at the same time, we need locks. It is important nowadays at least basically 
-undersatnd how it works. 
+If we operate in different transactions, with the same resource concurrently,
+we need to know how not to manage access to this resource at the same time. So we need need locks. It is important nowadays at least basically undersatnd how it works.
 
-Plus it is not only about parallels, it is also about threads. Anyway, even if we need access resiurces concurrently, it is 
-still important to know locking.
+The important thing to remember is that even a simple transaction will create a bunch of table locks. 
+And actually all the time before an SQL statement uses a table, it takes the appropriate table lock.
 
-Another thing to remember is that even a simple transaction will create a bunch of table locks. 
-And actually all the time before an SQL statement uses a table,
-it takes the appropriate table lock.
-For example, reading from a table will take a `ACCESS SHARE`
-lock which will conflict with the `ACCESS EXCLUSIVE` lock that `TRUNCATE` needs (`DELETE` statement).
+For example, reading from a table will take an `ACCESS SHARE`
+lock which will conflict with the `ACCESS EXCLUSIVE` lock that `TRUNCATE` operation needs (or `DELETE` statement).
 
-But this note is about explicit locks.
-There are also implicits, bit it is later...
+All these locks are implicit.
 
-In this one I just touch table locks (`LOCK TABLE` statement).
-But for example, when we do simple `SELECT` or update database, or alter columns, etc., we have locks even without knowing.
+But this note is not about it. It is about explicit locks.
 
-So, about table locks...
+To lock the table use `TABLE LOCK <table> IN ... MODE`.
 
-There are 2 types of locks - table and row level.
+There are 2 types of explicit locks - `table` and `row` level.
 
 Most of the time table level locks are for maintenance tasks (backups/schema changes/migrations), I guess...
 
@@ -44,7 +37,7 @@ Most of the time you do not need to do an explicit lock,
 Postgres does it automatically, unless you need to write and read to/from the same row simultaneously
 (transfer/send money at the same time, i.e.).
 
-But explicit locking can be useful also in bulk update, to avoid deadlocks with other transactions,
+But explicit locking can be useful in bulk update, for example, to avoid deadlocks with other transactions,
 or some data lost: `SHARE LOCK` - it prevents concurrent data modifications, `LOCK TABLE <table> IN SHARE MODE`;
 
 ---
