@@ -5,7 +5,7 @@ author: Iurii Ivanov
 tags: [postgres, lock]
 ---
 
-POSTGRES LOCKING
+...
 
 *Disclaimer*: this is not a tutiorial, just some notes to myself to know what to google, if I need to work with locks.
 This article will be changing during the time, when I come back to locks from time to time... or not.
@@ -18,7 +18,7 @@ undersatnd how it works.
 Plus it is not only about parallels, it is also about threads. Anyway, even if we need access resiurces concurrently, it is 
 still important to know locking.
 
-Another thing to remember is that even a simple transaction will create a bunch of locks.
+Another thing to remember is that even a simple transaction will create a bunch of table locks. 
 And actually all the time before an SQL statement uses a table,
 it takes the appropriate table lock.
 For example, reading from a table will take a `ACCESS SHARE`
@@ -47,7 +47,7 @@ Postgres does it automatically, unless you need to write and read to/from the sa
 But explicit locking can be useful also in bulk update, to avoid deadlocks with other transactions,
 or some data lost: `SHARE LOCK` - it prevents concurrent data modifications, `LOCK TABLE <table> IN SHARE MODE`;
 
-=======
+---
 
 Another thing to remember... I already mentioned about lock if we do transfer/top up money concurrently for the same user
 (one row), we may need to lock the row. If you don’t want concurrent transactions to modify a row between
@@ -63,21 +63,21 @@ The statement has to wait for modification until the previous transaction is fin
 The `SELECT FOR UPDATE` query running in the second connection is unfinished,
 and waiting for the first transaction to complete.
 
-=======
+---
 
 But if concurrent modifications are unlikely and you are not sure that you are actually going to modify the row,
 a `REPEATABLE READ` transaction may be even better. 
 That means that you have to be ready to retry the operation if the `UPDATE` fails due to a serialization error.
 
-=======
+---
 
 If you need to get a row from a table, process it and then remove it? Use `DELETE ... RETURNING`, then the row will be locked immediately!
 
-=======
+---
 
 `PG_LOCKS` - system view to see current locks. View is a pseudo-table. They are "not real", but they are available for `SELECT`.
 
-=======
+---
 
 There are several lock modes.
 
