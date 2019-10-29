@@ -82,4 +82,4 @@ if __name__ == '__main__':
         'routing_key': 'routing_key_b',
     }
     register_consumer(celery, do_something, params)
-    ```
+```
