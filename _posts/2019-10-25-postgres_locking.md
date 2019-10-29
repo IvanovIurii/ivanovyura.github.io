@@ -5,7 +5,7 @@ author: Iurii Ivanov
 tags: [postgres, lock]
 ---
 
-...
+Some thoughts I want to remember about explicit Postgres locks.
 
 *Disclaimer*: this is not a tutiorial, just some notes to myself to know what to google, if I need to work with locks.
 This article will be changing during the time, when I come back to locks from time to time... or not.
