@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiple Consumers to listen each its own queue
+title: Multiple Consumeres with its own queue 
 author: Iurii Ivanov
 tags: [python, celery, consumer, bootstep]
 ---
