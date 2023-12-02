@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Iurii Ivanov - Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/type-machine" rel="stylesheet">
+
     <style>
+        div {
+            font-family: 'Type Machine', sans-serif;
+        }
         .smaller-image {
             width: 90%;
             height: auto;
@@ -16,13 +21,20 @@
             align-items: center;
             text-align: center;
         }
+        footer {
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">Iurii Ivanov</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -35,20 +47,14 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<section id="about" class="py-5 centered-section" style="padding-top: 50px!important; padding-bottom: 50px!important">
+<section id="about" class="py-5 centered-section" style="padding-top: 100px!important; padding-bottom: 50px!important">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -84,36 +90,96 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-6" style="padding-left: 30px">
+            <div class="col-lg-5" style="padding-left: 65px">
                 <img src="static/me.jpeg" alt="Me" class="img-fluid rounded smaller-image d-none d-lg-block">
             </div>
         </div>
     </div>
 </section>
 
-<section id="experience" class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center">Experience</h2>
-        <p>Here later you can find my experiences</p>
-    </div>
-</section>
-
-<section id="projects" class="py-5">
+<section id="projects" class="bg-light py-5">
     <div class="container">
         <h2 class="text-center">Projects</h2>
-        <p>Here later you can find my Portfolio / Projects</p>
+
+        <br>
+        <div>
+            <h5>Vaadin CRM</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Transaction Screening</h5>
+            <p>This is similar to the project what I was working on in my previous job.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Content Delivery Network (CDN)</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Image Management Application</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Restaurant App</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Book Collection Application Project</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>A User Authentication System</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Personal Finance Manager API</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Stock Watcher and Tracker</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
+
+        <br>
+        <div>
+            <h5>Task Management App</h5>
+            <p>Description goes here.</p>
+            <a href="">Link to the project on GitHub</a>
+        </div>
     </div>
 </section>
 
-<section id="contact" class="bg-dark text-white py-5">
-    <div class="container text-center">
-        <h2>Contact Me</h2>
-        <p>Email</p>
-        <p>Linkedin</p>
-        <p>Phone</p>
-        <p>CV</p>
+<br/>
+<br/>
+<footer class="bg-dark text-light">
+    <div class="container">
+        <p>&copy; 2023 All rights reserved.</p>
     </div>
-</section>
+</footer>
 
 </body>
 </html>
