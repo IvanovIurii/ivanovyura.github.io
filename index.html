@@ -1,19 +1,123 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iurii Ivanov - Personal Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .smaller-image {
+            width: 60%;
+            height: auto;
+        }
+        .centered-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
 
-<div>
-  {% for post in site.posts %}
-    <article>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Iurii Ivanov</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-      <h1>{{ post.title }}</h1>
+<section id="about" class="py-5 centered-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>About Me</h2>
+                <div class="text-start">
+                    <p>
+                        I'm a 33-year-old IT professional based in Berlin, Germany, with over 12 years of experience in
+                        IT.
+                        I am currently specializing in backend development, I've spent the last six years working mostly
+                        as
+                        Backend Developer.
+                    </p>
+                    <p>
+                        Beyond work, I'm passionate about exploring the evolving tech scene, staying curious about
+                        cutting-edge advancements.
+                        In my free time I like running and going to gym, I like sport in general. I have tried yoga,
+                        bouldering, krav-maga, karate, etc.
+                    </p>
+                    <p>
+                        During quieter moments, you can find me reading a good book, satisfying my
+                        insatiable appetite for learning.
+                        Whether exploring technology, philosophy, or fiction, I relish the opportunity to broaden my
+                        perspectives and knowledge.
+                    </p>
+                    <p>
+                        Away from screens, I appreciate the finer things in life — a glass of good wine and engaging
+                        conversations bring me joy.
+                        The intersection of technology and humanity, coupled with life's experiences, is where I find
+                        true
+                        fulfillment.
+                    </p>
+                    <p>
+                        I'm not just an IT professional; I'm an individual with a great appreciation for the world.
+                        Whether coding, running,
+                        or savoring the nuances of life, I'm on a perpetual journey of growth, exploration, and
+                        connection.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="static/me.jpeg" alt="Me" class="img-fluid rounded smaller-image">
+            </div>
+        </div>
+    </div>
+</section>
 
-      <div>
-        {{ post.excerpt }}
-      </div>
-      <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
-      <br/>
-      <hr/>
-    </article>
-  {% endfor %}
-</div>
+<section id="experience" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center">Experience</h2>
+        <p>Here later you can find my experiences</p>
+    </div>
+</section>
+
+<section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Projects</h2>
+        <p>Here later you can find my Portfolio / Projects</p>
+    </div>
+</section>
+
+<section id="contact" class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h2>Contact Me</h2>
+        <p>Email</p>
+        <p>Linkedin</p>
+        <p>Phone</p>
+        <p>CV</p>
+    </div>
+</section>
+
+</body>
+</html>
